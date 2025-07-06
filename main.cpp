@@ -1,25 +1,16 @@
-#include <iostream> 
+#include <iostream>
 #include <fstream>
 #include <sstream>
 #include <cstdlib>
 #include <unistd.h>
-using namespace std;                                              
+using namespace std;
+
 void type_out(const string& text, int delay = 25000) {
     for (char c : text) {
-        cout << c << flush;                                               usleep(delay);
+        cout << c << flush;
+        usleep(delay);
     }
     cout << endl;
-}
-
-void display_footer() {                                               cout << "\n\033[1;32m"; // Bright green color
-    string footer = "Powered by F.J™ Cybertronic Systems®";
-
-    // Animated typing effect for the footer
-    for (char c : footer) {
-        cout << c << flush;
-        usleep(50000); // Slower typing for dramatic effect
-    }
-    cout << "\033[0m" << endl; // Reset color
 }
 
 string fetch_ip_data(const string& ip) {
@@ -34,7 +25,7 @@ string fetch_ip_data(const string& ip) {
 
 int main() {
     string ip;
-    cout << "\033[1;36m--> Enter IP or domain to track: \033[0m";
+    cout << "\033[1;36--> Enter IP or domain to track: \033[0m";
     cin >> ip;
 
     string json = fetch_ip_data(ip);
@@ -48,9 +39,6 @@ int main() {
     } else {
         type_out("\033[1;31m❌ Invalid IP or failed to fetch data.\033[0m");
     }
-
-    // Display the animated footer when finished
-    display_footer();
 
     return 0;
 }
