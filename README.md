@@ -1,5 +1,5 @@
----------------------------------------IP_finder is an IP Tracker Tool
----------------------------------------
+------------------------------------IP_finder is an IP Tracker Tool
+------------------------------------
 📒 A command-line IP geolocation tracker that fetches detailed information about any IP address or domain with animated terminal output.
 
 ✅ Features
@@ -48,7 +48,8 @@ Run the program and enter an IP address or domain when prompted:
 ./ip_tracker
 ```
 ---------------------------------------
-Example : 
+### Example : 
+
 Enter IP or domain to track: 8.8.8.8
 🎯 Data fetched successfully!
 "8.8.8.8"
