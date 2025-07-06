@@ -1,0 +1,24 @@
+name: Build IP_Finder
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Install g++
+        run: sudo apt update && sudo apt install -y g++
+
+      - name: Compile main.cpp
+        run: g++ -o IP_Finder main.cpp
+
+      - name: Run binary (optional)
+        run: ./IP_Finder || true
