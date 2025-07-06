@@ -1,5 +1,5 @@
------------------------------------IP_finder
------------------------------------
+IP_finder
+
 📒 A command-line IP geolocation tracker that fetches detailed information about any IP address or domain with animated terminal output.
 
 ✅ Features
